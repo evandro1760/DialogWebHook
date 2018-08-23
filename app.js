@@ -12,6 +12,8 @@ app.get('/', (req, res) => {
 
 app.post('/apiai', function(req, res){
     let mensagem = req.body;
+    let dado = req.body.queryResult.queryText;
+    console.log(dado);
     let session_id = req.body.session_id;
     let resposta = {
       "fulfillmentText": "EITA, eu vim do WeebHook",
@@ -52,19 +54,9 @@ app.post('/apiai', function(req, res){
           "text": "EITA, eu vim do WeebHook, agora to no Slack.",
         }
       },
-      "outputContexts": [
-        {
-          "name": "projects/responsive-edge-212711/agent/sessions/"+session_id+"/contexts/defaultwelcomeintent-followup",
-          "lifespanCount": 5,
-          "parameters": {
-          }
-        }],
-      "followupEventInput":  {
-        "name": "WELCOME",
-        "languageCode": "pt-BR",
-        "parameters": {
-        }
-    }}
+      "outputContexts": [],
+      "followupEventInput":  {}
+    }
 
     res.status(200).json(resposta);
     
