@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
 
 app.post('/apiai', function(req, res){
     let mensagem = req.body;
-    let dado = req.body.queryResult.queryText;
-    console.log(dado);
+    //let dado = req.body.queryResult.queryText;
+    console.log(mensagem);
     let session_id = req.body.session_id;
     let resposta = {
       "fulfillmentText": "EITA, eu vim do WeebHook",
