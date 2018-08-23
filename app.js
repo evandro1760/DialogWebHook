@@ -54,7 +54,7 @@ app.post('/apiai', function(req, res){
       },
       "outputContexts": [
         {
-          "name": "projects/responsive-edge-212711/agent/sessions/"+session_id+"/contexts/Empresas-no-followup",
+          "name": "projects/responsive-edge-212711/agent/sessions/"+session_id+"/contexts/defaultwelcomeintent-followup",
           "lifespanCount": 5,
           "parameters": {
           }
